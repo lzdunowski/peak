@@ -1,0 +1,6 @@
+<h1>{{ currency.name_text }}</h1>
+<ul>
+{% for rate in currency.choice_set.all %}
+    <li>{{ rate }}</li>
+{% endfor %}
+</ul>
