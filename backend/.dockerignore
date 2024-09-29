@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+__pycache__/
+.docker
+.pytest_cache/
+.tox/
+.coverage
+.git/
+.gitignore/
+.svn/
+.hg/
+.env/
+.venv/
+backend/__pycache__/
+backend/*/*/__pycache__/
+backend/*/*/*/__pycache__/
