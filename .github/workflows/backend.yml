@@ -30,7 +30,7 @@ jobs:
           pip list
 
       - name: Lint with flake8
-        run: docker compose run --rm backend sh -c "peak/flake8"
+        run: docker compose run --rm backend sh -c "flake8"
 
       - name: Test
         run: docker compose run --rm backend sh -c "python peak/manage.py test"
