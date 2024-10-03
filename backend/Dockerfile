@@ -6,10 +6,13 @@ COPY . /app/
 WORKDIR /app
 EXPOSE 8000
 
-
+ARG DEV=false
 RUN python -m venv /venv && \
     /venv/bin/pip install --upgrade pip && \
     /venv/bin/pip install -r /app/requirements.txt && \
+    if [$DEV = "true"]; \
+        then  /venv/bin/pip install -r requirements.dev.txt ; \
+    fi && \
     adduser \
         --disabled-password \
         --no-create-home \
@@ -18,3 +21,4 @@ RUN python -m venv /venv && \
 USER django-user
 ENV PATH="/venv/bin:$PATH"
 
+CMD ["python", "manage.py", "runserver"]
