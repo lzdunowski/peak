@@ -3,7 +3,7 @@ FROM python:3.10-alpine
 ENV PYTHONBUFFERED=1
 
 COPY . /app/
-WORKDIR /app
+WORKDIR /app/peak
 EXPOSE 8000
 
 ARG DEV=false
@@ -11,7 +11,7 @@ RUN python -m venv /venv && \
     /venv/bin/pip install --upgrade pip && \
     /venv/bin/pip install -r /app/requirements.txt && \
     if [$DEV = "true"]; \
-        then  /venv/bin/pip install -r requirements.dev.txt ; \
+        then  /venv/bin/pip install -r /app/requirements.dev.txt ; \
     fi && \
     adduser \
         --disabled-password \
