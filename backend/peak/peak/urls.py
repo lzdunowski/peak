@@ -18,6 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('mongodbintegration/',include('mongodbintegration.urls')),
+    path('mongodbintegration/', include('mongodbintegration.urls')),
     path('admin/', admin.site.urls),
 ]
