@@ -1,8 +1,8 @@
 from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+#from pymongo.server_api import ServerApi
 
 def get_db_handle():
-    url = "mongodb://vinci:dyntka@localhost:27017/"
+    url = "mongodb://admin:admin@mongo:27017/"
     
     client = MongoClient(url)
 
@@ -15,7 +15,7 @@ def get_db_handle():
         return client
 
 def get_collection_handle(db_name, collection_name):
-    url = "mongodb://vinci:dyntka@localhost:27017/"
+    url = "mongodb://admin:admin@mongo:27017/"
     
     client = MongoClient(url)
 
