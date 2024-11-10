@@ -14,4 +14,4 @@ __pycache__/
 backend/__pycache__/
 backend/*/*/__pycache__/
 backend/*/*/*/__pycache__/
-backend/db_data/
+backend/db_data/*
