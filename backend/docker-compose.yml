@@ -9,11 +9,11 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
-    volumes:
-      - ./db_data/:/data/db/
+#    volumes:
+#      - ./db_data/:/data/db/
 
   backend:
-    depends_on: 
+    depends_on:
       mongo:
         condition: service_started
     build: .
