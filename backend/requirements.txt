@@ -8,4 +8,6 @@ pylint
 flake8
 django-watchfiles
 djangorestframework
+dnspython
 drf-yasg
+drf-spectacular
