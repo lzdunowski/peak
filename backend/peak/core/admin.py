@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 from core import models
 
+
 class UserAdmin(BaseUserAdmin):
     """Admin pages for users
     https://docs.djangoproject.com/en/5.1/topics/auth/customizing/
@@ -27,8 +28,8 @@ class UserAdmin(BaseUserAdmin):
 
     add_fieldsets = (
         (None, {
-            'classes' : ('wide', ),
-            'fields' : (
+            'classes': ('wide', ),
+            'fields': (
                 'email',
                 'password1',
                 'password2',
@@ -39,5 +40,6 @@ class UserAdmin(BaseUserAdmin):
             )
         }),
     )
+
 
 admin.site.register(models.User, UserAdmin)
